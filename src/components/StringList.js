@@ -1,15 +1,13 @@
 import React from 'react'
+import Table from 'react-bootstrap/Table'
 
 function StringList({savedMessages}) {
     return (
-        <div>
-        <h2>Strings</h2>
-        <hr />
-            <table>
+        <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
-                <th>Address</th>
-                <th>String</th>
+                    <th>Address</th>
+                    <th>String</th>
                 </tr>
             </thead>
             <tbody>
@@ -18,12 +16,10 @@ function StringList({savedMessages}) {
                     <td>{message.messenger}</td>
                     <td>{message.message}</td>
                 </tr>
-                ))}
+                ))}          
+        </tbody>
+        </Table>
 
-                
-            </tbody>
-            </table>
-        </div>
     )
 }
 
