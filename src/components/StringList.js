@@ -4,6 +4,7 @@ function StringList({savedMessages}) {
     return (
         <div>
         <h2>Strings</h2>
+        <hr />
             <table>
             <thead>
                 <tr>

@@ -4,6 +4,7 @@ import {getWeb3, getHelloWorld} from './utils'
 import Navbar from './Navbar'
 import StringList from './StringList';
 import Web3 from 'web3'
+import Button from 'react-bootstrap/Button'
 
 function App() {
   const [string, setString] = useState(undefined)
@@ -53,9 +54,12 @@ function App() {
   }
 
   return (
-    <div className="main">
+    <div>
       <Navbar />
+    <div className="main">
+
       <div className="card">
+
         <form className="form" onSubmit={stringSet}>
           <label>
             Set your String!
@@ -66,14 +70,16 @@ function App() {
             onChange={(t) => setString(t.target.value)}
           />
           </label>
-          <button className="button" type="submit" value="Confirm">
-            Confirm
-          </button>
+          <Button variant="primary" type="submit" value="Submit">
+            Submit
+          </Button>
+
         </form>
         <br />
 
         <StringList savedMessages={savedMessages}/>
       </div>
+    </div>
     </div>
   );
 }
