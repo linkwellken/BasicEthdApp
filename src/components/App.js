@@ -12,9 +12,6 @@ function App() {
   const [accounts, setAccounts] = useState(undefined)
   const [HelloWorld, setHelloWorld] = useState(undefined)
   const [savedMessages, setSavedMessages] = useState([])
- 
-
-
 
   useEffect(() => {
     const init = async () => {
@@ -81,46 +78,15 @@ function App() {
                       Submit
                       </Button>
                       </div>
-
                   </form>
                 </div>
-
               <br />
             </div>
             <StringList savedMessages={savedMessages}/>
-
           </main>
           </div>
-
         </div>
       </div>
-
-
-    /* <div className="main">
-
-      <div className="card">
-
-        <form className="form" onSubmit={stringSet}>
-          <label>
-            Set your String!
-          <input
-            className="input"
-            type="text"
-            name="name"
-            onChange={(t) => setString(t.target.value)}
-          />
-          </label>
-          <Button variant="primary" type="submit" value="Submit">
-            Submit
-          </Button>
-
-        </form>
-        <br />
-
-        <StringList savedMessages={savedMessages}/>
-      </div>
-    </div>
-    </div> */
   );
 }
 
